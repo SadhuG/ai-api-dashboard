@@ -31,9 +31,9 @@ import Logo from "@/assets/kidjig-logo.png";
 // This is sample data.
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    name: "Guest",
+    email: "Not signed in",
+    avatar: null,
   },
   navMain: [
     {
