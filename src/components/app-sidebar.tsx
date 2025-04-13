@@ -33,7 +33,7 @@ const data = {
   user: {
     name: "Guest",
     email: "Not signed in",
-    avatar: null,
+    avatar: undefined,
   },
   navMain: [
     {
