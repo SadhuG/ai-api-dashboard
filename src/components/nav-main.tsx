@@ -23,7 +23,7 @@ export function NavMain({
 }) {
   return (
     <SidebarGroup>
-      <div className="bg-sidebar-border h-[1px] w-full"></div>
+      <div className="bg-sidebar-border mb-3 h-[1px] w-full"></div>
       <SidebarGroupLabel>Platform</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item) => (

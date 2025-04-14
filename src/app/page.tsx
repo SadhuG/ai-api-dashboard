@@ -1,4 +1,5 @@
 import { AppSidebar } from "@/components/app-sidebar";
+import Hero from "@/components/hero";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -13,6 +14,37 @@ import {
 } from "@/components/ui/sidebar";
 
 export default function Page() {
+  const companies = [
+    {
+      name: "Google",
+      image: "",
+    },
+    {
+      name: "Anthropic",
+      image: "",
+    },
+    {
+      name: "Mistral",
+      image: "",
+    },
+    {
+      name: "Meta AI",
+      image: "",
+    },
+    {
+      name: "Open AI",
+      image: "",
+    },
+    {
+      name: "Qwen",
+      image: "",
+    },
+    {
+      name: "DeepSeek",
+      image: "",
+    },
+  ];
+
   return (
     <SidebarProvider>
       <AppSidebar />
@@ -33,13 +65,18 @@ export default function Page() {
             </Breadcrumb>
           </div>
         </header>
-        <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-          <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
+
+        {/* container to keep the app centered */}
+        <div className="container mx-auto px-4">
+          <Hero />
+          <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
+            <div className="grid auto-rows-min gap-4 md:grid-cols-3">
+              <div className="bg-muted/50 aspect-video rounded-xl" />
+              <div className="bg-muted/50 aspect-video rounded-xl" />
+              <div className="bg-muted/50 aspect-video rounded-xl" />
+            </div>
+            <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
           </div>
-          <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
         </div>
       </SidebarInset>
     </SidebarProvider>
