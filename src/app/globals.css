@@ -86,3 +86,20 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  /* Animation definitions */
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Animation classes */
+  .animate-scroll-left {
+    animation: scrollLeft 25s linear infinite;
+  }
+}
