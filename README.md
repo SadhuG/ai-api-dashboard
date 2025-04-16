@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI API Dashboard UI Redesign
 
-## Getting Started
+A modern, responsive redesign of the [Kidjig AI Gateway](https://platform.kidjig.com) homepage, built with **React**, **Next.js**, **Tailwind CSS**, and **ShadCN UI**. This project focuses on enhancing user experience, performance, and accessibility while preserving the platform's core identity.
 
-First, run the development server:
+## 🚀 Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[View the redesigned dashboard](https://ai-api-dashboard-nu.vercel.app/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧰 Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js 15** – App directory, fast refresh, and performance optimization.
+- **React 19** – Modern features for a better developer experience.
+- **Tailwind CSS v4** – Utility-first styling with custom animations.
+- **ShadCN UI** – Accessible components for consistent design.
+- **Lucide Icons** – Crisp and minimal icons.
+- **TypeScript** – Optional typing for better scalability.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎯 Project Goals
 
-## Learn More
+- Enhance visual appeal and user engagement.
+- Improve mobile responsiveness and performance.
+- Maintain code quality and scalability.
+- Utilize modern UI libraries for a polished interface.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Dashboard & Layout
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Implemented a clean app shell using ShadCN for the dashboard and sidebar, ensuring simplicity and clarity.
 
-## Deploy on Vercel
+### Hero Section
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Replaced the animating gradient with a static gradient to reduce loading times and prevent rendering issues, especially during tab reloads.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### AI Company Logos
+
+- Introduced a single scroll animation to make the section more concise and optimize screen space.
+
+### Quick Start Section
+
+- Revised the content structure by converting cards into sequential steps, making the onboarding process more intuitive. Each step is now linked for improved accessibility.
+
+### Feature Highlights
+
+- Positioned key features like “Simple Integration” and “Infinite Scalability” immediately after the request code snippet to emphasize ease of use.
+
+### Model Tagging
+
+- Enhanced filter usability by tagging models based on broader criteria beyond just chat and images, improving day-to-day utility.
+
+### Playground Section
+
+- Added a Call-to-Action (CTA) and short copy to guide users directly to the playground, making it more accessible.
+
+### FAQs & Footer
+
+- Made minor updates while preserving the original design, which already offered a solid user experience.
+
+### UI Fixes & Theme
+
+- Addressed text clipping and overflow issues.
+- Updated the color palette to a dark slate base with blue/indigo highlights to create visual depth and ensure consistency with the dark theme.
+
+## 📈 Areas for Further Improvement
+
+- Refine the color palette with more neutral tones for better balance.
+- Enhance model tagging, loading speed, and search functionality.
