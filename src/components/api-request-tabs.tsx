@@ -6,10 +6,10 @@ const APIRequestTabs = () => {
   return (
     <Tabs defaultValue="javascript" className="w-full">
       {/* Tabs selector */}
-      <TabsList className="mb-4 flex gap-2 bg-transparent">
+      <TabsList className="flex h-fit flex-wrap gap-4 rounded-lg bg-transparent">
         <TabsTrigger
           value="javascript"
-          className="focus-visible:ring-ring data-[state=active]: inline-flex h-9 items-center justify-center gap-2 rounded-md border-2 border-white px-4 py-2 text-base font-medium whitespace-nowrap text-white transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=active]:border-[#4f49e6] data-[state=active]:bg-[#4F49E6] data-[state=active]:text-white [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+          className="flex items-center gap-2 rounded-lg border-2 border-white px-4 py-2 text-sm font-medium text-white transition-colors data-[state=active]:border-indigo-600 data-[state=active]:bg-indigo-600 data-[state=active]:text-white"
         >
           <Terminal className="h-4 w-4" />
           JavaScript
@@ -17,7 +17,7 @@ const APIRequestTabs = () => {
 
         <TabsTrigger
           value="python"
-          className="focus-visible:ring-ring data-[state=active]: inline-flex h-9 items-center justify-center gap-2 rounded-md border-2 border-white px-4 py-2 text-base font-medium whitespace-nowrap text-white transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=active]:border-[#4f49e6] data-[state=active]:bg-[#4F49E6] data-[state=active]:text-white [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+          className="flex items-center gap-2 rounded-lg border-2 border-white px-4 py-2 text-sm font-medium text-white transition-colors data-[state=active]:border-indigo-600 data-[state=active]:bg-indigo-600 data-[state=active]:text-white"
         >
           <Terminal className="h-4 w-4" />
           Python
@@ -25,7 +25,7 @@ const APIRequestTabs = () => {
 
         <TabsTrigger
           value="curl"
-          className="focus-visible:ring-ring data-[state=active]: inline-flex h-9 items-center justify-center gap-2 rounded-md border-2 border-white px-4 py-2 text-base font-medium whitespace-nowrap text-white transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=active]:border-[#4f49e6] data-[state=active]:bg-[#4F49E6] data-[state=active]:text-white [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+          className="flex items-center gap-2 rounded-lg border-2 border-white px-4 py-2 text-sm font-medium text-white transition-colors data-[state=active]:border-indigo-600 data-[state=active]:bg-indigo-600 data-[state=active]:text-white"
         >
           <Terminal className="h-4 w-4" />
           cURL
