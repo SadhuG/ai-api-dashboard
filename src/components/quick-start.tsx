@@ -5,89 +5,106 @@ import APIRequestTabs from "./api-request-tabs";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 
+// ✅ Steps data extracted for clarity
+const steps = [
+  {
+    title: "Step 1",
+    link: "Create Account",
+    href: "#",
+    desc: "Sign up and create your account to get started with Kidjig API",
+  },
+  {
+    title: "Step 2",
+    link: "Get Your API Key",
+    href: "#",
+    desc: "Generate your API key right in your dashboard",
+  },
+  {
+    title: "Step 3",
+    link: "Make API Calls",
+    href: "#",
+    desc: "Use our API to make calls to the AI of your choice",
+  },
+];
+
 const QuickStart = () => {
   return (
-    <section>
+    <section className="w-full px-4 py-12 md:px-10 lg:px-20">
       {/* Heading */}
-      <div>
-        <h2>Let's Get You Started</h2>
+      <div className="mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+        <h2 className="text-3xl font-bold text-white">Let's Get You Started</h2>
         <Button asChild>
-          <Link href={"#"} className="underline">
-            Docs:Quick Start
+          <Link href={"#"} className="flex items-center gap-2 underline">
+            Docs: Quick Start <ExternalLink className="h-4 w-4" />
           </Link>
         </Button>
       </div>
 
       {/* Steps */}
-      <div>
-        <div>
-          <h3>
-            Step 1:{" "}
-            <Link href={"#"} className="underline">
-              Create Account
-            </Link>
-          </h3>
-          <p>Sign up and create your account to get started with Kidjig API</p>
-        </div>
-        <div>
-          <h3>
-            Step 2:{" "}
-            <Link href={"#"} className="underline">
-              Get Your API Key
-            </Link>
-          </h3>
-          <p>Generate your API key right in your dashboard</p>
-        </div>
-        <div>
-          <h3>
-            Step 3:{" "}
-            <Link href={"#"} className="underline">
-              Make API Calls
-            </Link>
-          </h3>
-          <p>Use our API to make calls to the AI of your choice</p>
-        </div>
-
-        {/* steps outro to docs */}
-        <div>
-          <p>Now, you are set to go. To learn more read our docs.</p>
-          <Button asChild>
-            <Link href={"#"} className="underline">
-              Full Docs{" "}
-              <span>
-                <ExternalLink />
-              </span>
-            </Link>
-          </Button>
-        </div>
+      <div className="grid gap-8 md:grid-cols-3">
+        {steps.map((step, i) => (
+          <div key={i} className="space-y-2">
+            <h3 className="text-xl font-semibold text-white">
+              {step.title}: <br />
+              <Link href={step.href} className="underline">
+                {step.link}
+              </Link>
+            </h3>
+            <p className="text-sm text-gray-300">{step.desc}</p>
+          </div>
+        ))}
       </div>
 
-      <div>
-        <h2>Make Your First API Call</h2>
+      {/* Outro */}
+      <div className="mt-10 space-y-4">
+        <p className="text-gray-300">
+          Now, you are set to go. To learn more, read our docs.
+        </p>
+        <Button asChild>
+          <Link href={"#"} className="flex items-center gap-2 underline">
+            Read Full Docs <ExternalLink className="h-4 w-4" />
+          </Link>
+        </Button>
+      </div>
+
+      {/* API Call Section */}
+      <div className="mt-16 space-y-10">
+        <h2 className="text-3xl font-bold text-white">
+          Make Your First API Call
+        </h2>
+
+        {/* Base URL */}
         <div>
-          <h3>Base URL</h3>
-          <Card>
-            <CardContent className="flex justify-between">
-              <span className="font-mono">https://api.kidjig.com/provider</span>
-              <Copy />
+          <h3 className="mb-2 text-lg font-medium text-white">Base URL</h3>
+          <Card className="bg-gray-900 p-4">
+            <CardContent className="flex items-center justify-between overflow-auto px-4 py-3 font-mono text-sm whitespace-nowrap text-green-400">
+              https://api.kidjig.com/provider
+              <Copy className="text-foreground ml-4 h-4 w-4 cursor-pointer" />
             </CardContent>
           </Card>
         </div>
+
+        {/* Authorization */}
         <div>
-          <h3>Authorization</h3>
-          <Card>
-            <CardContent>
+          <h3 className="mb-2 text-lg font-medium text-white">Authorization</h3>
+          <Card className="bg-gray-900 p-4">
+            <CardContent className="space-y-4 px-4 py-3 text-gray-100">
               <span>
-                Include your API key in the X-Api-Key header for all requests:
+                Include your API key in the <code>X-Api-Key</code> header for
+                all requests:
               </span>
-              <Card className="w-fit">
-                <CardContent>X-Api-Key: YOUR_API_KEY</CardContent>
+              <Card className="mt-3 w-fit bg-blue-700 p-1 text-white">
+                <CardContent className="px-4 py-2 font-mono text-sm">
+                  X-Api-Key: YOUR_API_KEY
+                </CardContent>
               </Card>
             </CardContent>
           </Card>
         </div>
+
+        {/* Code Tabs */}
         <div>
-          <h3>Request:</h3>
+          <h3 className="mb-2 text-lg font-medium text-white">Request:</h3>
           <APIRequestTabs />
         </div>
       </div>

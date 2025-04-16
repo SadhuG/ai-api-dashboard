@@ -1,22 +1,44 @@
+import { Copy, Terminal } from "lucide-react";
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
 const APIRequestTabs = () => {
   return (
-    <Tabs defaultValue="javascript">
-      <TabsList>
-        <TabsTrigger value="javascript">&gt;_ JavaScript</TabsTrigger>
-        <TabsTrigger value="python">&gt;_ Python</TabsTrigger>
-        <TabsTrigger value="curl">&gt;_ Curl</TabsTrigger>
-      </TabsList>
-      <TabsContent value="javascript">
-        <pre>
-          <code>{`const axios = require('axios');
+    <Tabs defaultValue="javascript" className="w-full">
+      {/* Tabs selector */}
+      <TabsList className="mb-4 flex gap-2 bg-transparent">
+        <TabsTrigger
+          value="javascript"
+          className="focus-visible:ring-ring data-[state=active]: inline-flex h-9 items-center justify-center gap-2 rounded-md border-2 border-white px-4 py-2 text-base font-medium whitespace-nowrap text-white transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=active]:border-[#4f49e6] data-[state=active]:bg-[#4F49E6] data-[state=active]:text-white [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+        >
+          <Terminal className="h-4 w-4" />
+          JavaScript
+        </TabsTrigger>
 
-// Base URL for all API calls
+        <TabsTrigger
+          value="python"
+          className="focus-visible:ring-ring data-[state=active]: inline-flex h-9 items-center justify-center gap-2 rounded-md border-2 border-white px-4 py-2 text-base font-medium whitespace-nowrap text-white transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=active]:border-[#4f49e6] data-[state=active]:bg-[#4F49E6] data-[state=active]:text-white [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+        >
+          <Terminal className="h-4 w-4" />
+          Python
+        </TabsTrigger>
+
+        <TabsTrigger
+          value="curl"
+          className="focus-visible:ring-ring data-[state=active]: inline-flex h-9 items-center justify-center gap-2 rounded-md border-2 border-white px-4 py-2 text-base font-medium whitespace-nowrap text-white transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=active]:border-[#4f49e6] data-[state=active]:bg-[#4F49E6] data-[state=active]:text-white [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+        >
+          <Terminal className="h-4 w-4" />
+          cURL
+        </TabsTrigger>
+      </TabsList>
+      {/* JavaScript tab */}
+      <TabsContent value="javascript">
+        <div className="relative overflow-x-auto rounded-xl bg-gray-900 p-4">
+          <pre className="text-sm text-green-400">
+            <code>{`const axios = require('axios');
+
 const baseUrl = 'https://api.kidjig.com/provider';
 
-// Example: Chat completion with GPT-3.5
 const response = await axios.post(
   \`\${baseUrl}/api/v1/openai/chat/gpt-3.5-turbo\`,
   {
@@ -37,33 +59,19 @@ const response = await axios.post(
   }
 );
 
-console.log(response.data);
-// {
-//   success: true,
-//   statusCode: 200,
-//   message: "Completion generated successfully",
-//   data: {
-//     id: "msg_xyz123",
-//     model: "gpt-3.5-turbo",
-//     content: "The capital of France is Paris.",
-//     usage: {
-//       promptTokens: 12,
-//       completionTokens: 180,
-//       totalTokens: 192
-//     },
-//     cost: 0.006
-//   }
-// }`}</code>
-        </pre>
+console.log(response.data);`}</code>
+          </pre>
+          <Copy className="absolute top-4 right-4 cursor-pointer text-gray-400 hover:text-white" />
+        </div>
       </TabsContent>
+      {/* Python tab */}
       <TabsContent value="python">
-        <pre>
-          <code>{`import requests
+        <div className="relative overflow-x-auto rounded-xl bg-gray-900 p-4">
+          <pre className="text-sm text-green-400">
+            <code>{`import requests
 
-# Base URL for all API calls
 base_url = 'https://api.kidjig.com/provider'
 
-# Example: Chat completion with GPT-3.5
 response = requests.post(
     f"{base_url}/api/v1/openai/chat/gpt-3.5-turbo",
     json={
@@ -82,30 +90,18 @@ response = requests.post(
     }
 )
 
-print(response.json())
-# {
-#   "success": True,
-#   "statusCode": 200,
-#   "message": "Completion generated successfully",
-#   "data": {
-#     "id": "msg_xyz123",
-#     "model": "gpt-3.5-turbo",
-#     "content": "The capital of France is Paris.",
-#     "usage": {
-#       "promptTokens": 12,
-#       "completionTokens": 180,
-#       "totalTokens": 192
-#     },
-#     "cost": 0.006
-#   }
-# }`}</code>
-        </pre>
+print(response.json())`}</code>
+          </pre>
+          <Copy className="absolute top-4 right-4 cursor-pointer text-gray-400 hover:text-white" />
+        </div>
       </TabsContent>
+      {/* Curl tab (scroll fix) */}
       <TabsContent value="curl">
-        <pre>
-          <code>{`curl -X POST 'https://api.kidjig.com/provider/api/v1/openai/chat/gpt-3.5-turbo' 
-  -H 'X-Api-Key: YOUR_API_KEY' 
-  -H 'Content-Type: application/json' 
+        <div className="relative max-w-full overflow-x-auto rounded-xl bg-gray-900 p-4">
+          <pre className="text-sm break-words whitespace-pre-wrap text-green-400">
+            <code>{`curl -X POST 'https://api.kidjig.com/provider/api/v1/openai/chat/gpt-3.5-turbo' \\
+  -H 'X-Api-Key: YOUR_API_KEY' \\
+  -H 'Content-Type: application/json' \\
   -d '{
     "prompt": "What is the capital of France?",
     "stream": false,
@@ -116,7 +112,9 @@ print(response.json())
       "topK": 40
     }
   }'`}</code>
-        </pre>
+          </pre>
+          <Copy className="absolute top-4 right-4 cursor-pointer text-gray-400 hover:text-white" />
+        </div>
       </TabsContent>
     </Tabs>
   );
