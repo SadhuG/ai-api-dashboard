@@ -89,17 +89,16 @@
 
 @layer utilities {
   /* Animation definitions */
-  @keyframes scrollLeft {
+  @keyframes scroll-left {
     0% {
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(-50%);
     }
   }
 
-  /* Animation classes */
   .animate-scroll-left {
-    animation: scrollLeft 25s linear infinite;
+    animation: scroll-left 40s linear infinite;
   }
 }

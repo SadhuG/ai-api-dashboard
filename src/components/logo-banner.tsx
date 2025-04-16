@@ -1,61 +1,69 @@
 import React from "react";
 
+import Anthropic from "@/assets/anthropic.svg";
+import DeepSeek from "@/assets/deepseek-color.png";
+import Google from "@/assets/google.png";
+import Meta from "@/assets/meta-color.png";
+import Mistral from "@/assets/mistral-color.png";
+import OpenAI from "@/assets/openai.png";
+import Qwen from "@/assets/qwen-color.png";
+import Image from "next/image";
+
 const LogoBanner = () => {
   const companies = [
     {
       name: "Google",
-      image: "",
+      image: Google,
     },
     {
       name: "Anthropic",
-      image: "",
+      image: Anthropic,
     },
     {
       name: "Mistral",
-      image: "",
+      image: Mistral,
     },
     {
       name: "Meta AI",
-      image: "",
+      image: Meta,
     },
     {
       name: "Open AI",
-      image: "",
+      image: OpenAI,
     },
     {
       name: "Qwen",
-      image: "",
+      image: Qwen,
     },
     {
       name: "DeepSeek",
-      image: "",
+      image: DeepSeek,
     },
   ];
   return (
-    <div className="max-w-full py-12">
-      <div className="relative mx-auto overflow-hidden">
-        <div className="flex">
-          <div className="animate-scroll-left flex whitespace-nowrap">
-            {companies.map((company) => (
-              <div key={company.name} className="mx-4 flex-none">
-                <span className="text-2xl font-bold">{company.name}</span>
+    <div className="max-w-full overflow-hidden py-12">
+      <div className="relative w-full">
+        <div className="animate-scroll-left flex w-max gap-8">
+          {Array(3)
+            .fill(companies)
+            .flat()
+            .map((company, index) => (
+              <div
+                key={`${company.name}-${index}`}
+                className="flex items-center gap-3"
+              >
+                <Image
+                  src={company.image}
+                  alt={`Logo ${company.name}`}
+                  width={40}
+                  height={40}
+                  className="object-contain"
+                />
+                <span className="text-xl font-medium whitespace-nowrap text-white md:text-2xl">
+                  {company.name}
+                </span>
               </div>
             ))}
-          </div>
-          <div className="animate-scroll-left flex whitespace-nowrap">
-            {companies.map((company) => (
-              <div key={company.name} className="mx-4 flex-none">
-                <span className="text-2xl font-bold">{company.name}</span>
-              </div>
-            ))}
-          </div>
-          <div className="animate-scroll-left flex whitespace-nowrap">
-            {companies.map((company) => (
-              <div key={company.name} className="mx-4 flex-none">
-                <span className="text-2xl font-bold">{company.name}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </div>
