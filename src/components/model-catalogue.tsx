@@ -186,59 +186,67 @@ const ModelCatalogue = () => {
   const tabTypes = ["all", "Image", "Search", "PDF", "Reasoning"] as const;
 
   return (
-    <Tabs defaultValue="all" className="w-full">
-      <TabsList className="flex h-fit flex-wrap gap-4 rounded-lg bg-transparent">
-        <TabsTrigger
-          value="all"
-          className="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white transition-colors data-[state=active]:bg-indigo-600 data-[state=active]:text-white"
-        >
-          <BarChart className="h-4 w-4" />
-          All
-        </TabsTrigger>
-        <TabsTrigger
-          value="Image"
-          className="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white transition-colors data-[state=active]:bg-indigo-600 data-[state=active]:text-white"
-        >
-          <ImageIcon className="h-4 w-4" />
-          Image
-        </TabsTrigger>
-        <TabsTrigger
-          value="Search"
-          className="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white transition-colors data-[state=active]:bg-indigo-600 data-[state=active]:text-white"
-        >
-          <Search className="h-4 w-4" />
-          Search
-        </TabsTrigger>
-        <TabsTrigger
-          value="PDF"
-          className="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white transition-colors data-[state=active]:bg-indigo-600 data-[state=active]:text-white"
-        >
-          <FileText className="h-4 w-4" />
-          PDF
-        </TabsTrigger>
-        <TabsTrigger
-          value="Reasoning"
-          className="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white transition-colors data-[state=active]:bg-indigo-600 data-[state=active]:text-white"
-        >
-          <BrainCircuit className="h-4 w-4" />
-          Reasoning
-        </TabsTrigger>
-      </TabsList>
+    <section>
+      <div>
+        <h2 className="mb-4 text-center text-3xl leading-tight font-bold text-white sm:text-4xl lg:text-5xl">
+          Explore Available Models
+        </h2>
+      </div>
 
-      {tabTypes.map((tab) => (
-        <TabsContent
-          key={tab}
-          value={tab}
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          {modelList
-            .filter((model) => tab === "all" || model.features?.includes(tab))
-            .map((model) => (
-              <ModelCard key={model.name} model={model} />
-            ))}
-        </TabsContent>
-      ))}
-    </Tabs>
+      <Tabs defaultValue="all" className="w-full">
+        <TabsList className="flex h-fit flex-wrap gap-4 rounded-lg bg-transparent">
+          <TabsTrigger
+            value="all"
+            className="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white transition-colors data-[state=active]:bg-indigo-600 data-[state=active]:text-white"
+          >
+            <BarChart className="h-4 w-4" />
+            All
+          </TabsTrigger>
+          <TabsTrigger
+            value="Image"
+            className="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white transition-colors data-[state=active]:bg-indigo-600 data-[state=active]:text-white"
+          >
+            <ImageIcon className="h-4 w-4" />
+            Image
+          </TabsTrigger>
+          <TabsTrigger
+            value="Search"
+            className="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white transition-colors data-[state=active]:bg-indigo-600 data-[state=active]:text-white"
+          >
+            <Search className="h-4 w-4" />
+            Search
+          </TabsTrigger>
+          <TabsTrigger
+            value="PDF"
+            className="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white transition-colors data-[state=active]:bg-indigo-600 data-[state=active]:text-white"
+          >
+            <FileText className="h-4 w-4" />
+            PDF
+          </TabsTrigger>
+          <TabsTrigger
+            value="Reasoning"
+            className="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white transition-colors data-[state=active]:bg-indigo-600 data-[state=active]:text-white"
+          >
+            <BrainCircuit className="h-4 w-4" />
+            Reasoning
+          </TabsTrigger>
+        </TabsList>
+
+        {tabTypes.map((tab) => (
+          <TabsContent
+            key={tab}
+            value={tab}
+            className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {modelList
+              .filter((model) => tab === "all" || model.features?.includes(tab))
+              .map((model) => (
+                <ModelCard key={model.name} model={model} />
+              ))}
+          </TabsContent>
+        ))}
+      </Tabs>
+    </section>
   );
 };
 
