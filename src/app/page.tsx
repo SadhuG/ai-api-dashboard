@@ -1,6 +1,7 @@
 import { AppSidebar } from "@/components/app-sidebar";
 import FAQSection from "@/components/faq";
 import Features from "@/components/features";
+import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import LogoBanner from "@/components/logo-banner";
 import ModelCatalogue from "@/components/model-catalogue";
@@ -49,6 +50,7 @@ export default function Page() {
           <ModelCatalogue />
           <PlayGroundSection />
           <FAQSection />
+          <Footer />
         </div>
       </SidebarInset>
     </SidebarProvider>
