@@ -14,8 +14,8 @@ const Features = () => {
           <Settings className="h-10 w-10 text-indigo-400" />
           <span>Simple Integration</span>
           <p className="text-sm font-normal text-gray-300">
-            Simply change the endpoints in your existing setup, and you're ready
-            to go.
+            Simply change the endpoints in your existing setup, and you&apos;re
+            ready to go.
           </p>
         </CardHeader>
         <CardContent>

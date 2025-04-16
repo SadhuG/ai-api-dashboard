@@ -1,12 +1,9 @@
 "use client";
 
 import {
-  AudioWaveform,
   BookOpen,
   ChartColumn,
   CircleHelp,
-  Command,
-  GalleryVerticalEnd,
   Home,
   KeyRound,
   LayoutGrid,

@@ -32,7 +32,9 @@ const QuickStart = () => {
     <section className="w-full px-4 py-12 md:px-10 lg:px-20">
       {/* Heading */}
       <div className="mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-        <h2 className="text-3xl font-bold text-white">Let's Get You Started</h2>
+        <h2 className="text-3xl font-bold text-white">
+          Let&apos;s Get You Started
+        </h2>
         <Button asChild>
           <Link href={"#"} className="flex items-center gap-2 underline">
             Docs: Quick Start <ExternalLink className="h-4 w-4" />

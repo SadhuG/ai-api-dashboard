@@ -61,7 +61,7 @@ const FAQSection = () => {
           </AccordionTrigger>
           <AccordionContent className="px-4 pb-4 text-gray-300">
             You can reach out to us for support through our Discord community or
-            via email founder@kidjig.com. We're here to help!
+            via email founder@kidjig.com. We&apos;re here to help!
           </AccordionContent>
         </AccordionItem>
       </Accordion>
