@@ -1,4 +1,5 @@
 import { AppSidebar } from "@/components/app-sidebar";
+import FAQSection from "@/components/faq";
 import Features from "@/components/features";
 import Hero from "@/components/hero";
 import LogoBanner from "@/components/logo-banner";
@@ -47,6 +48,7 @@ export default function Page() {
           <Features />
           <ModelCatalogue />
           <PlayGroundSection />
+          <FAQSection />
         </div>
       </SidebarInset>
     </SidebarProvider>
