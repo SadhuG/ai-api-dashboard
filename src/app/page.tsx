@@ -1,6 +1,7 @@
 import { AppSidebar } from "@/components/app-sidebar";
 import Hero from "@/components/hero";
 import LogoBanner from "@/components/logo-banner";
+import ModelCatalogue from "@/components/model-catalogue";
 import QuickStart from "@/components/quick-start";
 import {
   Breadcrumb,
@@ -41,6 +42,7 @@ export default function Page() {
           <Hero />
           <LogoBanner />
           <QuickStart />
+          <ModelCatalogue />
         </div>
       </SidebarInset>
     </SidebarProvider>
