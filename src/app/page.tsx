@@ -3,6 +3,7 @@ import Features from "@/components/features";
 import Hero from "@/components/hero";
 import LogoBanner from "@/components/logo-banner";
 import ModelCatalogue from "@/components/model-catalogue";
+import PlayGroundSection from "@/components/playground-section";
 import QuickStart from "@/components/quick-start";
 import {
   Breadcrumb,
@@ -45,6 +46,7 @@ export default function Page() {
           <QuickStart />
           <Features />
           <ModelCatalogue />
+          <PlayGroundSection />
         </div>
       </SidebarInset>
     </SidebarProvider>

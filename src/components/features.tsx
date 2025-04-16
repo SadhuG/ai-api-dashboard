@@ -26,8 +26,10 @@ const Features = () => {
           Infinite Scalability
         </CardHeader>
         <CardContent>
-          <div className="h-full w-full border-b border-l border-gray-600">
-            <Image src={Graph} alt="Infinite Scalability" />
+          <div className="h-full w-full">
+            <div className="h-fit w-fit border-b border-l border-gray-600">
+              <Image src={Graph} alt="Infinite Scalability" />
+            </div>
           </div>
         </CardContent>
       </Card>
