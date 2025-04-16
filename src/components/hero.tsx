@@ -15,8 +15,8 @@ const Hero = () => {
             with enterprise-grade security.
           </p>
           <div className="mx-auto mt-6 flex flex-col gap-3 sm:flex-row">
-            <Button>Get API Key</Button>
-            <Button>Schedule Demo</Button>
+            <Button variant={"primary"}>Get API Key</Button>
+            <Button variant={"primary"}>Schedule Demo</Button>
           </div>
         </div>
       </div>

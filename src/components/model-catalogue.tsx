@@ -55,7 +55,7 @@ const ModelCard = ({ model }: { model: ModelType }) => (
           {model.features.map((feature, index) => (
             <div
               key={index}
-              className="flex items-center gap-2 rounded-full border border-indigo-600 bg-indigo-600/50 px-3 py-1 text-sm font-medium text-white"
+              className="flex items-center gap-2 rounded-full border border-indigo-400 bg-indigo-400/50 px-3 py-1 text-sm font-medium text-white"
             >
               {featureIcons[feature as keyof typeof featureIcons]}
               {feature}
@@ -68,7 +68,7 @@ const ModelCard = ({ model }: { model: ModelType }) => (
 
       <Button
         asChild
-        className="mt-auto w-full truncate border-2 border-indigo-600 bg-indigo-600/50 text-sm font-medium text-white hover:bg-indigo-600/70"
+        className="mt-auto w-full truncate border-2 border-indigo-800 bg-indigo-800/50 text-sm font-medium text-white hover:bg-indigo-800/70"
       >
         <Link href="#" className="flex items-center justify-center gap-2">
           Try {model.name}
