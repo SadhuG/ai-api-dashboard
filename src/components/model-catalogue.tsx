@@ -68,7 +68,7 @@ const ModelCard = ({ model }: { model: ModelType }) => (
 
       <Button
         asChild
-        className="mt-auto w-full truncate border-2 border-indigo-600 bg-indigo-600/50 text-sm font-medium text-white"
+        className="mt-auto w-full truncate border-2 border-indigo-600 bg-indigo-600/50 text-sm font-medium text-white hover:bg-indigo-600/70"
       >
         <Link href="#" className="flex items-center justify-center gap-2">
           Try {model.name}

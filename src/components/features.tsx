@@ -13,14 +13,19 @@ const Features = () => {
         <CardHeader className="text-foreground flex flex-col gap-3 text-xl font-semibold">
           <Settings className="h-10 w-10 text-indigo-400" />
           <span>Simple Integration</span>
-          <p className="text-sm font-normal">
+          <p className="text-sm font-normal text-gray-300">
             Simply change the endpoints in your existing setup, and you're ready
             to go.
           </p>
         </CardHeader>
         <CardContent>
-          <div className="h-full w-full">
-            <Image src={EasyToIntgr} alt="Simple Integration" />
+          <div className="relative h-48 w-full overflow-hidden rounded-lg">
+            <Image
+              src={EasyToIntgr}
+              alt="Simple Integration"
+              fill
+              className="object-contain"
+            />
           </div>
         </CardContent>
       </Card>
@@ -29,16 +34,19 @@ const Features = () => {
         <CardHeader className="text-foreground flex flex-col gap-3 text-xl font-semibold">
           <ChartNoAxesColumnIncreasing className="h-10 w-10 text-indigo-400" />
           <span>Infinite Scalability</span>
-          <p className="text-sm font-normal">
+          <p className="text-sm font-normal text-gray-300">
             Experience low latency with our AI API, deploy instantly, and
             surpass rate limits without impact.
           </p>
         </CardHeader>
         <CardContent>
-          <div className="h-full w-full">
-            <div className="h-full w-full border-b border-l border-gray-600">
-              <Image src={Graph} alt="Infinite Scalability" />
-            </div>
+          <div className="relative h-48 w-full overflow-hidden rounded-lg">
+            <Image
+              src={Graph}
+              alt="Infinite Scalability"
+              fill
+              className="object-contain"
+            />
           </div>
         </CardContent>
       </Card>
